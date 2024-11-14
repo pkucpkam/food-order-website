@@ -1,0 +1,101 @@
+.footer-container {
+    background: linear-gradient(135deg, #b95e1d 0%, #000000 100%);
+    padding: 20px 0;
+    margin-top: 40px;
+    position: relative;
+    z-index: 10;
+}
+
+.footer-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+/* Structure of Footer elements */
+.footer-content {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 0 20px;
+    flex-wrap: wrap;
+}
+
+/* Logo styling */
+.pixel-logo {
+    font-family: 'Press Start 2P', cursive;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 18px;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    text-align: center;
+}
+
+/* Social Icons styling */
+.pixel-social {
+    display: flex;
+    gap: 20px;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.pixel-icon {
+    width: 32px;
+    height: 32px;
+    background-image: url('../../images/1.png'); /* Ensure the correct path */
+    background-size: cover; /* Changed to 'cover' for better fit */
+    background-position: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px; /* Rounded corners for a softer look */
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.pixel-icon:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Copyright styling */
+.pixel-copyright {
+    font-family: 'Press Start 2P', cursive;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 12px;
+    text-align: center;
+    flex: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .pixel-logo {
+        text-align: center;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .pixel-social {
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .pixel-copyright {
+        text-align: center;
+        margin-left: 0;
+    }
+}
